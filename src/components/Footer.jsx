@@ -26,9 +26,9 @@ export default function Footer() {
                 {[
                   { icon: <Github size={20}/>, href: 'https://github.com/neharathore' },
                   { icon: <Linkedin size={20}/>, href: 'https://linkedin.com/in/neharathore' },
-                  { icon: <Mail size={20}/>, href: 'mailto:neharathore855@gmail.com' }
+                  { icon: <Mail size={20}/>, href: 'mailto:neharathore25088@gmail.com' }
                 ].map((item, i) => (
-                  <a key={i} href={item.href} className="w-10 h-10 rounded-full glass border border-border flex items-center justify-center text-foreground hover:bg-[#e91e63] hover:text-white transition-all transform hover:-translate-y-1">
+                  <a key={i} href={item.href} className="w-10 h-10 rounded-full glass border border-border flex items-center justify-center text-foreground hover:!bg-[#e91e63] hover:text-white hover:border-[#e91e63] hover:shadow-[0_0_15px_rgba(233,30,99,0.4)] transition-all transform hover:-translate-y-1">
                     {item.icon}
                   </a>
                 ))}
@@ -38,7 +38,7 @@ export default function Footer() {
           <div>
              <h3 className="text-sm font-black uppercase tracking-[0.2em] mb-8 text-foreground">Quick Links</h3>
              <ul className="space-y-4">
-                {['Home', 'About', 'Skills', 'Projects', 'Contact'].map((item) => (
+                {['Home', 'About', 'Services', 'Skills', 'Projects', 'Experience', 'Contact'].map((item) => (
                   <li key={item}>
                     <a href={`#${item.toLowerCase().replace('projects', 'portfolio')}`} className="text-muted-foreground hover:text-[#e91e63] transition-colors font-bold text-sm uppercase tracking-widest">
                       {item}
@@ -53,9 +53,9 @@ export default function Footer() {
              <ul className="space-y-4">
                 <li className="text-muted-foreground font-medium">Indore, India</li>
                 <li className="text-muted-foreground hover:text-[#e91e63] transition-colors font-medium">
-                   <a href="mailto:neharathore855@gmail.com">neharathore855@gmail.com</a>
+                   <a href="mailto:neharathore25088@gmail.com">neharathore25088@gmail.com</a>
                 </li>
-                <li className="text-muted-foreground font-medium">+91 8817652701</li>
+                <li className="text-muted-foreground font-medium">+91 7223055830</li>
              </ul>
           </div>
         </div>
@@ -67,7 +67,7 @@ export default function Footer() {
            
            <button 
              onClick={scrollToTop}
-             className="w-12 h-12 rounded-full glass border border-border flex items-center justify-center text-[#e91e63] hover:bg-[#e91e63] hover:text-white transition-all group shadow-xl shadow-[#e91e63]/5"
+             className="w-12 h-12 rounded-full glass border border-border flex items-center justify-center text-[#e91e63] hover:bg-[#e91e63] hover:text-white hover:border-[#e91e63] transition-all group shadow-xl shadow-[#e91e63]/5 hover:shadow-[#e91e63]/30"
            >
               <ArrowUp size={20} className="group-hover:-translate-y-1 transition-transform" />
            </button>

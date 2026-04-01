@@ -5,37 +5,107 @@ import { Github, ExternalLink, Filter, Layout, Globe, Code2 } from 'lucide-react
 const projects = [
   {
     id: 1,
-    title: 'ShipMent Hub',
-    category: 'React',
-    description: 'Transforming shipping logistics with a high-performance React frontend. Integrated complex tracking and cost management interfaces.',
-    tech: ['React.js', 'Tailwind', 'Framer Motion', 'REST API'],
-    image: 'https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?q=80&w=2070&auto=format&fit=crop',
-    github: 'https://github.com/neharathore',
-    demo: 'https://shipment-hub.demo.com',
+    title: 'TVET Compass',
+    category: 'WordPress',
+    description: 'Strategic consultancy for technical vocational education, driving operational excellence and growth through digital solutions.',
+    tech: ['WordPress', 'Elementor', 'Custom CSS', 'Strategy'],
+    image: '/project/tvtcompass.png',
+    github: '#',
+    demo: 'https://tvetcompass.com/',
   },
   {
     id: 2,
     title: 'Global Food Oman',
-    category: 'HTML/CSS',
-    description: 'A premium bilingual corporate experience built for global engagement. Focused on RTL optimization and pixel-perfect responsiveness.',
-    tech: ['HTML5', 'CSS3', 'JavaScript', 'Bootstrap', 'RTL Support'],
-    image: 'https://images.unsplash.com/photo-1504674900247-0877df9cc836?q=80&w=2070&auto=format&fit=crop',
+    category: 'React',
+    description: 'A premium corporate experience built with React. Focused on performance, international engagement, and pixel-perfect responsiveness.',
+    tech: ['React.js', 'Tailwind CSS', 'Framer Motion', 'RTL Support'],
+    image: '/project/global-food.png',
     github: '#',
     demo: 'https://globalfoodoman.com',
   },
   {
     id: 3,
     title: 'ICG - Certifications',
-    category: 'WordPress',
-    description: 'High-ticket WordPress solution for an international certification group. Optimized for speed, SEO, and professional clarity.',
-    tech: ['WordPress', 'Elementor Pro', 'Custom CSS', 'Seo Optimized'],
-    image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=2015&auto=format&fit=crop',
+    category: 'React',
+    description: 'High-performance React solution for an international certification group. Optimized for speed, professional clarity, and user engagement.',
+    tech: ['React.js', 'Tailwind', 'REST API', 'Modern UI'],
+    image: '/project/international-certification-group.png',
     github: '#',
-    demo: 'https://icg-cert.com',
+    demo: 'https://international-certification-group.com',
+  },
+  {
+    id: 4,
+    title: 'GovEdge Consultants',
+    category: 'WordPress',
+    description: 'A professional consultancy firm specializing in governance, risk, and compliance (GRC) for institutional excellence.',
+    tech: ['WordPress', 'Divi', 'Business GRC', 'SEO'],
+    image: '/project/govedge.png',
+    github: '#',
+    demo: 'https://www.govedge.co/',
+  },
+  {
+    id: 5,
+    title: 'Quiet Orbit',
+    category: 'WordPress',
+    description: 'Clarity-focused private consultations for life transitions, career shifts, and personal structural relocation in Luxembourg.',
+    tech: ['WordPress', 'Modern Aesthetic', 'Premium Typography'],
+    image: '/project/quietorbit.png',
+    github: '#',
+    demo: 'https://quietorbit.lu/',
+  },
+  {
+    id: 6,
+    title: 'Silk Strands',
+    category: 'WordPress',
+    description: 'Premium e-commerce destination for high-end hair styling tools and professional-grade beauty accessories.',
+    tech: ['WordPress', 'WooCommerce', 'E-commerce', 'Payment Gateway'],
+    image: '/project/silkstrands.png',
+    github: '#',
+    demo: 'https://www.silkstrands.in/',
+  },
+  {
+    id: 7,
+    title: 'Vellymeta',
+    category: 'WordPress',
+    description: 'A global beauty and skincare brand presence delivering high-performance personal care products to millions.',
+    tech: ['WordPress', 'WooCommerce', 'Global Reach', 'UX Design'],
+    image: '/project/vellymeta.png',
+    github: '#',
+    demo: 'https://www.vellymeta.com/',
+  },
+  {
+    id: 8,
+    title: 'Palette Wealth',
+    category: 'WordPress',
+    description: 'Strategic wealth management and investment advisory services designed to create lasting financial masterpieces.',
+    tech: ['WordPress', 'Finance Dashboard', 'Premium Dark Mode'],
+    image: '/project/palettewealth.png',
+    github: '#',
+    demo: 'https://palettewealth.com',
+  },
+  {
+    id: 9,
+    title: 'Blusapent',
+    category: 'WordPress',
+    description: 'Innovative consulting and technology services empowering businesses with precise, high-performance software solutions.',
+    tech: ['WordPress', 'Corporate', 'Consulting Theme'],
+    image: '/project/blusapent.png',
+    github: '#',
+    demo: 'https://blusapent.com/',
+  },
+  {
+    id: 10,
+    title: 'FHIZO',
+    category: 'WordPress',
+    description: 'A global fuel and commodity supply powerhouse fueling international trade through reliable energy solutions.',
+    tech: ['WordPress', 'Industrial', 'Energy Portfolio'],
+    image: '/project/fhizo.png',
+    github: '#',
+    demo: 'http://fhizo.com/',
   },
 ];
 
-const categories = ['All', 'React', 'WordPress', 'HTML/CSS'];
+const categories = ['All', 'React', 'WordPress'];
 
 export default function Portfolio() {
   const [activeTab, setActiveTab] = useState('All');
@@ -110,7 +180,7 @@ export default function Portfolio() {
                   
                   <div className="absolute inset-0 bg-background/20 opacity-0 group-hover:opacity-100 transition-all duration-500 flex items-center justify-center gap-4 backdrop-blur-[2px]">
                      {project.github !== '#' && (
-                       <a href={project.github} target="_blank" rel="noreferrer" className="w-12 h-12 rounded-full bg-foreground text-background flex items-center justify-center hover:scale-110 active:scale-95 transition-transform shadow-xl">
+                       <a href={project.github} target="_blank" rel="noreferrer" className="w-12 h-12 rounded-full bg-foreground text-background flex items-center justify-center hover:scale-110 active:scale-95 transition-all shadow-xl hover:!bg-[#e91e63] hover:text-white">
                           <Github size={20} />
                        </a>
                      )}
@@ -124,20 +194,20 @@ export default function Portfolio() {
                 </div>
 
                 {/* Content */}
-                <div className="p-8 flex-grow flex flex-col">
+                <div className="p-6 md:p-8 flex-grow flex flex-col">
                   <div className="flex items-center gap-2 mb-3">
                      {project.category === 'React' && <Code2 size={16} className="text-[#e91e63]" />}
                      {project.category === 'WordPress' && <Globe size={16} className="text-purple-500" />}
                      {project.category === 'HTML/CSS' && <Layout size={16} className="text-orange-500" />}
-                     <h3 className="text-2xl font-bold text-foreground group-hover:text-[#e91e63] transition-colors">{project.title}</h3>
+                     <h3 className="text-xl md:text-2xl font-bold text-foreground group-hover:text-[#e91e63] transition-colors">{project.title}</h3>
                   </div>
-                  <p className="text-muted-foreground text-sm leading-relaxed mb-8 flex-grow font-medium">
+                  <p className="text-muted-foreground text-sm leading-relaxed mb-6 md:mb-8 flex-grow font-medium">
                     {project.description}
                   </p>
                   
                   <div className="pt-6 border-t border-border flex flex-wrap gap-2">
                     {project.tech.map((t, i) => (
-                      <span key={i} className="text-[10px] font-bold uppercase tracking-widest px-3 py-1.5 rounded-lg bg-foreground/5 text-muted-foreground border border-border group-hover:border-[#e91e63]/20 group-hover:text-[#e91e63] transition-colors">
+                      <span key={i} className="text-[10px] font-bold uppercase tracking-widest px-2.5 py-1 rounded-lg bg-foreground/5 text-muted-foreground border border-border group-hover:border-[#e91e63]/20 group-hover:text-[#e91e63] transition-colors">
                         {t}
                       </span>
                     ))}
