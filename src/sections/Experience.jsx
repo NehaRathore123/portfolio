@@ -46,13 +46,13 @@ const education = [
 
 export default function Experience() {
   return (
-    <section id="experience" className="py-24 bg-background relative overflow-hidden px-6">
+    <section id="experience" className="py-12 bg-background relative overflow-hidden px-6">
       <div className="container mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="text-center mb-20"
+          className="text-center mb-10"
         >
           <div className="inline-block px-4 py-1.5 rounded-full bg-[#e91e63]/10 text-[#e91e63] text-[10px] font-bold uppercase tracking-[0.2em] mb-4 font-black">
              Career Path
@@ -67,7 +67,7 @@ export default function Experience() {
             <h3 className="text-2xl font-bold mb-8 flex items-center gap-3">
               <Briefcase className="text-[#e91e63]" /> Experience
             </h3>
-            <div className="space-y-12 relative before:absolute before:inset-0 before:ml-5 before:w-0.5 before:-translate-x-px before:bg-gradient-to-b before:from-[#e91e63]/50 before:via-border before:to-transparent">
+            <div className="space-y-12 relative before:absolute before:inset-0 before:ml-5 before:w-[1px] before:-translate-x-px before:bg-gradient-to-b before:from-[#e91e63]/50 before:via-border/50 before:to-transparent">
               {experiences.map((exp, index) => (
                 <motion.div
                   key={index}

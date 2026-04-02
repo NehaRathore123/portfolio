@@ -9,9 +9,9 @@ export default function Footer() {
   };
 
   return (
-    <footer className="bg-background border-t border-border pt-20 pb-10 px-6 overflow-hidden">
+    <footer className="bg-background border-t border-border pt-10 pb-10 px-6 overflow-hidden">
       <div className="container mx-auto">
-        <div className="grid md:grid-cols-4 gap-12 mb-20">
+        <div className="grid md:grid-cols-4 gap-12 mb-10">
           <div className="col-span-2">
              <div className="flex items-center space-x-2 mb-6">
                 <div className="w-10 h-10 rounded-full bg-[#e91e63] flex items-center justify-center text-white font-bold">

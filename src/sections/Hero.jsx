@@ -29,7 +29,7 @@ export default function Hero() {
   }, [charIndex, isDeleting, roleIndex]);
 
   return (
-    <section id="home" className="relative min-h-screen flex items-center overflow-hidden bg-background pt-20">
+    <section id="home" className="relative min-h-screen flex items-center overflow-hidden bg-background pt-32 lg:pt-20">
       {/* Background Pattern */}
       <div className="absolute inset-0 bg-pattern opacity-[0.05] dark:opacity-[0.07] pointer-events-none z-0"></div>
       
@@ -53,13 +53,13 @@ export default function Hero() {
                <div className="h-1 w-12 bg-[#e91e63] rounded-full"></div>
             </div>
 
-            <h1 className="text-6xl md:text-8xl font-black mb-6 tracking-tighter leading-none text-foreground">
+            <h1 className="text-5xl md:text-8xl font-black mb-6 tracking-tighter leading-none text-foreground">
               Neha <br />
               <span className="text-foreground/90">Rathore</span>
             </h1>
 
-            <div className="text-3xl md:text-5xl font-extrabold mb-10 h-[1.2em] flex items-center justify-center lg:justify-start">
-              <span className="text-foreground/60 mr-3">I'm a</span>
+            <div className="text-2xl md:text-5xl font-extrabold mb-10 h-[2.4em] md:h-[1.2em] flex items-center justify-center lg:justify-start">
+              <span className="text-foreground/60 mr-3 whitespace-nowrap">I'm a</span>
               <span className="text-[#e91e63] relative">
                 {text}
                 <span className="absolute -right-1 top-0 bottom-0 w-[2px] bg-[#e91e63] animate-pulse"></span>

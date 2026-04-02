@@ -25,6 +25,26 @@ const projects = [
   },
   {
     id: 3,
+    title: 'Palette Wealth',
+    category: 'WordPress',
+    description: 'A premium wealth management platform focused on personalized financial strategies. Built with a sophisticated corporate aesthetic.',
+    tech: ['WordPress', 'Elementor', 'Financial Strategy', 'Custom CSS'],
+    image: '/images/palette-wealth.png',
+    github: '#',
+    demo: 'https://www.palettewealth.com/',
+  },
+  {
+    id: 4,
+    title: 'BluSapent',
+    category: 'WordPress',
+    description: 'Global technology consulting site providing precision-driven software solutions and strategic operational streamlining.',
+    tech: ['WordPress', 'Software Solutions', 'Responsive Design', 'API Integration'],
+    image: '/images/blusapent.png',
+    github: '#',
+    demo: 'https://blusapent.com/',
+  },
+  {
+    id: 5,
     title: 'ICG - Certifications',
     category: 'WordPress',
     description: 'High-ticket WordPress solution for an international certification group. Optimized for speed, SEO, and professional clarity.',
@@ -45,9 +65,9 @@ export default function Portfolio() {
     : projects.filter(p => p.category === activeTab);
 
   return (
-    <section id="portfolio" className="py-24 bg-background relative px-6 overflow-hidden">
+    <section id="portfolio" className="py-12 bg-background relative px-6 overflow-hidden">
       <div className="container mx-auto">
-        <div className="flex flex-col lg:flex-row items-end justify-between mb-16 gap-8">
+        <div className="flex flex-col lg:flex-row items-end justify-between mb-8 gap-8">
           <motion.div
             initial={{ opacity: 0, x: -30 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -68,7 +88,7 @@ export default function Portfolio() {
              initial={{ opacity: 0, x: 30 }}
              whileInView={{ opacity: 1, x: 0 }}
              viewport={{ once: true }}
-             className="flex flex-wrap gap-2 glass p-2 rounded-2xl border border-border"
+             className="flex flex-wrap gap-2 glass p-2 rounded-2xl border border-border justify-center lg:justify-start"
           >
             {categories.map((cat) => (
               <button

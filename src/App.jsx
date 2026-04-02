@@ -6,6 +6,7 @@ import Skills from './sections/Skills';
 import Services from './sections/Services';
 import Portfolio from './sections/Portfolio';
 import Experience from './sections/Experience';
+import Resume from './sections/Resume';
 import Testimonials from './sections/Testimonials';
 import Contact from './sections/Contact';
 import Footer from './components/Footer';
@@ -35,6 +36,7 @@ function App() {
         <Services />
         <Portfolio />
         <Experience />
+        <Resume />
         <Testimonials />
         <Contact />
       </main>

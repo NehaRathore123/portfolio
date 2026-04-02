@@ -3,7 +3,7 @@ import { Mail, Phone, MapPin, Send, Github, Linkedin, Instagram } from 'lucide-r
 
 export default function Contact() {
   return (
-    <section id="contact" className="py-24 bg-background relative px-6">
+    <section id="contact" className="py-12 bg-background relative px-6">
       <div className="container mx-auto">
         <div className="grid lg:grid-cols-2 gap-16">
           {/* Info Side */}

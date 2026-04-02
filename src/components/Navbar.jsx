@@ -22,7 +22,7 @@ export default function Navbar({ theme, toggleTheme }) {
   ];
 
   return (
-    <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${scrolled ? 'py-4' : 'py-6'}`}>
+    <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${scrolled ? 'py-2 lg:py-4' : 'py-4 lg:py-6'}`}>
       <div className="container mx-auto px-6">
         <motion.div 
           className="glass rounded-full px-6 py-3 flex items-center justify-between border border-white/10"
@@ -87,13 +87,13 @@ export default function Navbar({ theme, toggleTheme }) {
             exit={{ opacity: 0, height: 0 }}
             className="lg:hidden glass border-b border-white/10 mt-2 mx-6 rounded-3xl overflow-hidden shadow-2xl"
           >
-            <div className="flex flex-col p-6 space-y-4">
+            <div className="flex flex-col p-8 space-y-6">
               {navLinks.map((link) => (
                 <a
                   key={link.name}
                   href={link.href}
                   onClick={() => setIsOpen(false)}
-                  className="text-lg font-medium text-foreground hover:text-primary transition-colors"
+                  className="text-xl font-bold text-foreground hover:text-[#e91e63] transition-colors"
                 >
                   {link.name}
                 </a>

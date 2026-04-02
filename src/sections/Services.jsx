@@ -57,9 +57,9 @@ const services = [
 
 export default function Services() {
   return (
-    <section id="services" className="py-24 bg-background relative px-6">
+    <section id="services" className="py-12 bg-background relative px-6">
       <div className="container mx-auto">
-        <div className="text-center mb-16">
+        <div className="text-center mb-8">
           <motion.div
              initial={{ opacity: 0, scale: 0.9 }}
              whileInView={{ opacity: 1, scale: 1 }}
