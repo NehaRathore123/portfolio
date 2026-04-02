@@ -25,9 +25,9 @@ export default function About() {
               <div className="absolute -inset-4 bg-gradient-to-r from-primary to-purple-600 rounded-[2.5rem] blur opacity-25 group-hover:opacity-40 transition duration-1000"></div>
               <div className="relative glass rounded-[2.5rem] p-3 border border-border overflow-hidden">
                 <img
-                  src="/images/about-portrait.png"
+                  src="/images/about-professional.png"
                   alt="Neha Rathore"
-                  className="rounded-[2rem] w-full aspect-[4/5] object-cover grayscale hover:grayscale-0 transition-all duration-700"
+                  className="rounded-[2rem] w-full aspect-[4/5] object-cover hover:scale-105 transition-all duration-700"
                 />
               </div>
             </div>
@@ -57,11 +57,11 @@ export default function About() {
               </p>
             </div>
 
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-12">
+            <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 mb-12">
               {stats.map((stat, i) => (
-                <div key={i} className="glass p-5 rounded-2xl border border-border text-center group hover:bg-[#e91e63]/5 transition-all">
-                  <p className="text-[#e91e63] font-black text-2xl mb-1">{stat.value}</p>
-                  <p className="text-muted-foreground text-[10px] font-bold uppercase tracking-widest">{stat.label}</p>
+                <div key={i} className="glass p-4 md:p-5 rounded-2xl border border-border text-center group hover:bg-[#e91e63]/5 transition-all">
+                  <p className="text-[#e91e63] font-black text-xl md:text-2xl mb-1">{stat.value}</p>
+                  <p className="text-muted-foreground text-[8px] md:text-[10px] font-bold uppercase tracking-widest">{stat.label}</p>
                 </div>
               ))}
             </div>

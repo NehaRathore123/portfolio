@@ -1,110 +1,97 @@
 import { motion } from 'framer-motion';
 import { 
-  Layout, 
   Globe, 
   Settings,
   Monitor,
+  Code2,
+  Zap,
+  Cpu,
+  Layers,
+  Palette,
+  Layout,
+  Terminal,
+  Database,
+  Search,
+  Box,
+  Infinity,
   Smartphone,
   Figma,
-  Code2,
-  FileCode
+  Wind,
+  Command,
+  Github,
+  CheckCircle2
 } from 'lucide-react';
 
 const skillCategories = [
   {
-    title: 'Frontend Development',
-    icon: <Code2 className="text-blue-500" />,
-    skills: [
-      { name: 'HTML5', level: '95%' },
-      { name: 'CSS3 / SCSS', level: '90%' },
-      { name: 'JavaScript (ES6+)', level: '85%' },
-      { name: 'React.js', level: '80%' },
-    ]
+    title: 'Frontend',
+    icon: <Code2 size={20} className="text-[#e91e63]" />,
+    skills: ['React.js', 'JavaScript', 'HTML5', 'CSS3', 'Tailwind']
   },
   {
-    title: 'CMS & Ecommerce',
-    icon: <Globe className="text-purple-500" />,
-    skills: [
-      { name: 'WordPress', level: '95%' },
-      { name: 'Elementor / Pro', level: '95%' },
-      { name: 'WooCommerce', level: '90%' },
-      { name: 'RTL Layouts', level: '85%' },
-    ]
+    title: 'CMS & Store',
+    icon: <Globe size={20} className="text-[#e91e63]" />,
+    skills: ['WordPress', 'Elementor', 'WooCommerce', 'Shopify']
   },
   {
-    title: 'Frameworks & Tools',
-    icon: <Settings className="text-green-500" />,
-    skills: [
-      { name: 'Bootstrap / Tailwind', level: '90%' },
-      { name: 'Git / GitHub', level: '85%' },
-      { name: 'VS Code', level: '95%' },
-      { name: 'Vite', level: '80%' },
-    ]
+    title: 'Tools',
+    icon: <Settings size={20} className="text-[#e91e63]" />,
+    skills: ['Git / GitHub', 'VS Code', 'Vite', 'NPM / Yarn']
   },
   {
-    title: 'Optimization & Design',
-    icon: <Monitor className="text-orange-500" />,
-    skills: [
-      { name: 'SEO Best Practices', level: '85%' },
-      { name: 'Site Speed Optimization', level: '80%' },
-      { name: 'Responsive UI Design', level: '95%' },
-      { name: 'Figma to Code', level: '80%' },
-    ]
+    title: 'Design & SEO',
+    icon: <Monitor size={20} className="text-[#e91e63]" />,
+    skills: ['Figma', 'UI/UX', 'SEO', 'Site Speed']
   }
 ];
 
 export default function Skills() {
   return (
+<<<<<<< HEAD
     <section id="skills" className="py-12 bg-background relative px-6">
+=======
+    <section id="skills" className="py-24 bg-background px-6">
+>>>>>>> vijay
       <div className="container mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
+<<<<<<< HEAD
           className="text-center mb-10"
+=======
+          className="text-center mb-16"
+>>>>>>> vijay
         >
-          <div className="inline-block px-4 py-1.5 rounded-full bg-[#e91e63]/10 text-[#e91e63] text-[10px] font-bold uppercase tracking-[0.2em] mb-4 font-black">
-             My Toolkit
-          </div>
-          <h2 className="text-4xl md:text-5xl font-black mb-4 text-foreground">Expertise in <span className="gradient-text">Modern Tech</span></h2>
-          <p className="text-muted-foreground max-w-2xl mx-auto italic font-medium">
-            "Crafting digital experiences using the best frontend tools"
-          </p>
+          <h2 className="text-4xl md:text-5xl font-black mb-4">My <span className="gradient-text">Toolkit</span></h2>
+          <p className="text-muted-foreground text-sm uppercase tracking-widest font-bold">What I use to build amazing things</p>
         </motion.div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
           {skillCategories.map((category, idx) => (
             <motion.div
               key={idx}
-              initial={{ opacity: 0, y: 20 }}
+              initial={{ opacity: 0, y: 15 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: idx * 0.1 }}
-              className="glass p-8 rounded-[2rem] border border-border group hover:border-[#e91e63]/40 transition-all hover:shadow-2xl hover:shadow-[#e91e63]/5"
+              className="p-8 rounded-3xl border border-border bg-card/30 hover:bg-card hover:shadow-xl transition-all duration-300 group"
             >
-              <div className="w-14 h-14 rounded-2xl bg-foreground/5 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
-                {category.icon}
+              <div className="flex items-center gap-3 mb-6">
+                <div className="p-2 rounded-xl bg-[#e91e63]/5 group-hover:bg-[#e91e63]/10 transition-colors">
+                  {category.icon}
+                </div>
+                <h3 className="text-lg font-bold text-foreground">{category.title}</h3>
               </div>
-              <h3 className="text-xl font-bold mb-6 text-foreground">{category.title}</h3>
-              <div className="space-y-6">
+              
+              <ul className="space-y-4">
                 {category.skills.map((skill, i) => (
-                  <div key={i}>
-                    <div className="flex justify-between text-xs mb-2">
-                      <span className="font-bold text-foreground/70 uppercase tracking-tighter">{skill.name}</span>
-                      <span className="text-[#e91e63] font-black">{skill.level}</span>
-                    </div>
-                    <div className="h-1.5 bg-foreground/5 rounded-full overflow-hidden">
-                      <motion.div
-                        initial={{ width: 0 }}
-                        whileInView={{ width: skill.level }}
-                        viewport={{ once: true }}
-                        transition={{ duration: 1, delay: 0.5 + (i * 0.1) }}
-                        className="h-full bg-[#e91e63] rounded-full"
-                      ></motion.div>
-                    </div>
-                  </div>
+                  <li key={i} className="flex items-center gap-3 text-muted-foreground hover:text-foreground transition-colors group/item">
+                    <CheckCircle2 size={14} className="text-[#e91e63] opacity-40 group-hover/item:opacity-100 transition-opacity" />
+                    <span className="text-sm font-medium">{skill}</span>
+                  </li>
                 ))}
-              </div>
+              </ul>
             </motion.div>
           ))}
         </div>

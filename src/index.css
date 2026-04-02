@@ -1,6 +1,10 @@
 @import "tailwindcss";
 @config "../tailwind.config.js";
 
+html {
+  scroll-behavior: smooth;
+}
+
 :root {
   --background: #ffffff;
   --foreground: #111827;
@@ -62,7 +66,7 @@ html, body {
 
 /* Glass Utility */
 .glass {
-  background: rgba(255, 255, 255, 0.7);
+  background-color: rgba(255, 255, 255, 0.7);
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
   border: 1px solid rgba(0, 0, 0, 0.1);
@@ -70,14 +74,14 @@ html, body {
 }
 
 .dark .glass {
-  background: rgba(15, 23, 42, 0.6);
+  background-color: rgba(15, 23, 42, 0.6);
   border: 1px solid rgba(255, 255, 255, 0.15);
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2);
 }
 
 /* Glass Card Utility */
 .glass-card {
-  background: rgba(255, 255, 255, 0.7);
+  background-color: rgba(255, 255, 255, 0.7);
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
   border: 1px solid rgba(0, 0, 0, 0.1);
@@ -87,7 +91,7 @@ html, body {
 }
 
 .dark .glass-card {
-  background: rgba(15, 23, 42, 0.6);
+  background-color: rgba(15, 23, 42, 0.6);
   border: 1px solid rgba(255, 255, 255, 0.15);
   box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
 }
@@ -112,9 +116,9 @@ html, body {
 
 .large-bg-text {
   position: absolute;
-  font-size: 18vw;
-  font-weight: 900;
-  line-height: 1;
+  font-size: clamp(4rem, 15vw, 15rem);
+  font-weight: 950;
+  line-height: 0.8;
   color: var(--foreground);
   opacity: 0.03;
   white-space: nowrap;
