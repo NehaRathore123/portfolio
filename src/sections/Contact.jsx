@@ -118,7 +118,7 @@ export default function Contact() {
             )}
 
             <form onSubmit={handleSubmit} className="space-y-6">
-              <div className="grid md:grid-cols-2 gap-6">
+              {/* <div className="grid md:grid-cols-2 gap-6">
                 <div className="space-y-2">
                   <label className="text-sm font-bold text-foreground/80 lowercase tracking-wider ml-1">Your Name</label>
                   <input 
@@ -143,8 +143,32 @@ export default function Contact() {
                     className="w-full bg-foreground/5 border border-border rounded-xl px-5 py-3 focus:outline-none focus:border-[#e91e63] transition-colors text-foreground"
                   />
                 </div>
-              </div>
+              </div> */}
               
+                 <div className="space-y-2">
+                  <label className="text-sm font-bold text-foreground/80 lowercase tracking-wider ml-1">Your Name</label>
+                  <input 
+                    required
+                    name="name"
+                    value={formData.name}
+                    onChange={handleChange}
+                    type="text" 
+                    placeholder="John Doe"
+                    className="w-full bg-foreground/5 border border-border rounded-xl px-5 py-3 focus:outline-none focus:border-[#e91e63] transition-colors text-foreground"
+                  />
+                </div>
+                <div className="space-y-2">
+                  <label className="text-sm font-bold text-foreground/80 lowercase tracking-wider ml-1">Email Address</label>
+                  <input 
+                    required
+                    name="email"
+                    value={formData.email}
+                    onChange={handleChange}
+                    type="email" 
+                    placeholder="john@example.com"
+                    className="w-full bg-foreground/5 border border-border rounded-xl px-5 py-3 focus:outline-none focus:border-[#e91e63] transition-colors text-foreground"
+                  />
+                </div>
               {/* Subject Field Removed */}
 
               <div className="space-y-2">

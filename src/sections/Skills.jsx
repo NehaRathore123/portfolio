@@ -1,24 +1,9 @@
 import { motion } from 'framer-motion';
-import { 
-  Globe, 
+import {
+  Globe,
   Settings,
   Monitor,
   Code2,
-  Zap,
-  Cpu,
-  Layers,
-  Palette,
-  Layout,
-  Terminal,
-  Database,
-  Search,
-  Box,
-  Infinity,
-  Smartphone,
-  Figma,
-  Wind,
-  Command,
-  Github,
   CheckCircle2
 } from 'lucide-react';
 
@@ -47,26 +32,25 @@ const skillCategories = [
 
 export default function Skills() {
   return (
-<<<<<<< HEAD
-    <section id="skills" className="py-12 bg-background relative px-6">
-=======
     <section id="skills" className="py-24 bg-background px-6">
->>>>>>> vijay
       <div className="container mx-auto">
+
+        {/* Heading */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-<<<<<<< HEAD
-          className="text-center mb-10"
-=======
           className="text-center mb-16"
->>>>>>> vijay
         >
-          <h2 className="text-4xl md:text-5xl font-black mb-4">My <span className="gradient-text">Toolkit</span></h2>
-          <p className="text-muted-foreground text-sm uppercase tracking-widest font-bold">What I use to build amazing things</p>
+          <h2 className="text-4xl md:text-5xl font-black mb-4">
+            My <span className="gradient-text">Toolkit</span>
+          </h2>
+          <p className="text-muted-foreground text-sm uppercase tracking-widest font-bold">
+            What I use to build amazing things
+          </p>
         </motion.div>
 
+        {/* Skills Grid */}
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
           {skillCategories.map((category, idx) => (
             <motion.div
@@ -81,13 +65,21 @@ export default function Skills() {
                 <div className="p-2 rounded-xl bg-[#e91e63]/5 group-hover:bg-[#e91e63]/10 transition-colors">
                   {category.icon}
                 </div>
-                <h3 className="text-lg font-bold text-foreground">{category.title}</h3>
+                <h3 className="text-lg font-bold text-foreground">
+                  {category.title}
+                </h3>
               </div>
-              
+
               <ul className="space-y-4">
                 {category.skills.map((skill, i) => (
-                  <li key={i} className="flex items-center gap-3 text-muted-foreground hover:text-foreground transition-colors group/item">
-                    <CheckCircle2 size={14} className="text-[#e91e63] opacity-40 group-hover/item:opacity-100 transition-opacity" />
+                  <li
+                    key={i}
+                    className="flex items-center gap-3 text-muted-foreground hover:text-foreground transition-colors group/item"
+                  >
+                    <CheckCircle2
+                      size={14}
+                      className="text-[#e91e63] opacity-40 group-hover/item:opacity-100 transition-opacity"
+                    />
                     <span className="text-sm font-medium">{skill}</span>
                   </li>
                 ))}
@@ -95,6 +87,7 @@ export default function Skills() {
             </motion.div>
           ))}
         </div>
+
       </div>
     </section>
   );
