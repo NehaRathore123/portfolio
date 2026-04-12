@@ -40,14 +40,14 @@ export default function Contact() {
   return (
     <section id="contact" className="py-12 bg-background relative px-6">
       <div className="container mx-auto">
-        <div className="grid lg:grid-cols-2 gap-16">
+        <div className="grid lg:grid-cols-2 gap-12 lg:gap-16">
           {/* Info Side */}
           <motion.div
             initial={{ opacity: 0, x: -30 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
           >
-            <h2 className="text-4xl md:text-5xl font-black mb-6">Let's Build Something <br /><span className="gradient-text">Great Together</span></h2>
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-black mb-6">Let's Build Something <br className="hidden sm:block" /><span className="gradient-text">Great Together</span></h2>
             <p className="text-muted-foreground text-lg mb-10 leading-relaxed">
               Have a project in mind or just want to say hi? Feel free to reach out. I'm always open to discussing new projects, creative ideas, or opportunities to be part of your vision.
             </p>
@@ -61,28 +61,28 @@ export default function Contact() {
                 <a 
                   key={i} 
                   href={item.href}
-                  className="flex items-center gap-6 p-6 glass rounded-2xl border border-border hover:border-[#e91e63]/50 transition-all group"
+                  className="flex items-center gap-4 sm:gap-6 p-4 sm:p-6 glass rounded-2xl border border-border hover:border-[#e91e63]/50 transition-all group min-w-0"
                 >
-                  <div className="w-12 h-12 rounded-xl bg-[#e91e63]/10 flex items-center justify-center text-[#e91e63] group-hover:scale-110 transition-transform">
+                  <div className="w-10 h-10 sm:w-12 sm:h-12 shrink-0 rounded-xl bg-[#e91e63]/10 flex items-center justify-center text-[#e91e63] group-hover:scale-110 transition-transform">
                     {item.icon}
                   </div>
-                  <div>
-                    <p className="text-xs font-bold text-muted-foreground uppercase tracking-widest mb-1">{item.label}</p>
-                    <p className="text-lg font-bold text-foreground">{item.value}</p>
+                  <div className="min-w-0">
+                    <p className="text-[10px] sm:text-xs font-bold text-muted-foreground uppercase tracking-widest mb-1">{item.label}</p>
+                    <p className="text-sm sm:text-lg font-bold text-foreground truncate">{item.value}</p>
                   </div>
                 </a>
               ))}
             </div>
 
-            <div className="mt-12 flex items-center gap-6">
-               <p className="text-sm font-bold text-muted-foreground uppercase tracking-widest">Connect with me:</p>
-               <div className="flex gap-4">
+            <div className="mt-10 sm:mt-12 flex flex-col sm:flex-row items-start sm:items-center gap-4 sm:gap-6">
+               <p className="text-xs sm:text-sm font-bold text-muted-foreground uppercase tracking-widest">Connect with me:</p>
+               <div className="flex gap-3 sm:gap-4">
                   {[
                     { icon: <Linkedin size={20} />, href: 'https://linkedin.com/in/neharathore' },
                     { icon: <Github size={20} />, href: 'https://github.com/neharathore' },
                     { icon: <Instagram size={20} />, href: '#' },
                   ].map((social, i) => (
-                    <a key={i} href={social.href} className="w-10 h-10 rounded-full glass border border-border flex items-center justify-center text-foreground hover:!bg-[#e91e63] hover:text-white hover:border-[#e91e63] transition-all">
+                    <a key={i} href={social.href} className="w-10 h-10 shrink-0 rounded-full glass border border-border flex items-center justify-center text-foreground hover:!bg-[#e91e63] hover:text-white hover:border-[#e91e63] transition-all">
                        {social.icon}
                     </a>
                   ))}
