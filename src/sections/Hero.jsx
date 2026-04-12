@@ -79,7 +79,8 @@ export default function Hero() {
                 <Play size={16} className="fill-current group-hover:translate-x-1 transition-transform" />
               </a>
               <a
-                href="/resume.pdf"
+                href="/images/neha-rathore-resume.pdf"
+                download="Neha_Rathore_Resume.pdf"
                 className="flex items-center gap-2 px-8 py-4 rounded-full border-2 border-border font-bold text-foreground hover:bg-[#e91e63] hover:border-[#e91e63] hover:text-white transition-all duration-300"
               >
                 <Download size={18} />
